@@ -9,7 +9,7 @@ body{
 }
 
 .app{
-  background-image: url('./assets/mount1.jpg');
+  background-image: url('./assets/too\ hot.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease-out;
@@ -17,6 +17,12 @@ body{
 
 .app.warm{
   background-image:  url('./assets/früh.jpg') ;
+}
+.app.cold{
+  background-image:  url('./assets/cold2.jpg') ;
+}
+.app.xcold{
+  background-image:  url('./assets/snow.jpg') ;
 }
 
 main{
@@ -98,4 +104,12 @@ main{
   font-size: 48px;
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.option {
+  text-align: center;
+  font-size: 40px;
+  color: #FFF;
+  text-shadow: 3px 6px  rgba(0,0,0,0.2);
+ 
 }
