@@ -1,30 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, {useState } from 'react';
 
 const api = {
-  key: '9ac99c0f34aea6f0ff9722fb838208b2',
-  base: 'https://api.openweathermap.org/data/2.5'
+  key: process.env.REACT_APP_API_KEY,
+  base: process.env.REACT_APP_BASEURL
 }
-
+console.log(process.env.REACT_APP_API_KEY)
 function App() {
   const [query, setQuery] = useState('')
   const [weather, setWeather] = useState({})
 
-  // useEffect(() => {
-
-  //   axios.get(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-  //     .then((res) => console.log('res', res))
-  //     .then((result) => {
-  //       setWeather(result)
-  //       setQuery('')
-  //     })
-  //     .catch((err => console.log(err)))
-  // }, [])
-
   const search = evt => {
     if (evt.key === 'Enter') {
-      // fetch(`${api.base}weather?q=${query}&units=metric&appid=${api.key}`)
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&appid=9ac99c0f34aea6f0ff9722fb838208b2&units=metric`)
+      fetch(`${api.base}q=${query}&appid=${api.key}&units=metric`)
         .then(res => res.json())
         .then((result) => {
           console.log('a', result)

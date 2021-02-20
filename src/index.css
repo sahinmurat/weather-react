@@ -12,17 +12,20 @@ body{
   background-image: url('./assets/too\ hot.jpg');
   background-size: cover;
   background-position: bottom;
-  transition: 0.4 ease-out;
+  transition: 5 ease;
 }
 
 .app.warm{
   background-image:  url('./assets/früh.jpg') ;
+  transition: 5 ease;
 }
 .app.cold{
   background-image:  url('./assets/cold2.jpg') ;
+  transition: 5 ease;
 }
 .app.xcold{
   background-image:  url('./assets/snow.jpg') ;
+  transition: 5 ease;
 }
 
 main{
